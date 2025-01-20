@@ -12,7 +12,7 @@ function App() {
     <div className="bg-white dark:bg-[#1E1E1E]">
       {/* <Navbar /> */}
       {/* <Hero /> */}
-      {/* <AboutMe /> */}
+      <AboutMe />
       <Services />
       {/* <MyProjects /> */}
       {/* <Testimonials /> */}

@@ -3,26 +3,26 @@ import PrograssRange from "../prograss-range/ProgressRange";
 
 const AboutMe = () => {
   return (
-    <div className="max-w-7xl mx-auto flex justify-center items-center gap-36 h-screen bg-white dark:bg-[#1E1E1E]">
+    <div className="max-w-7xl mx-auto flex flex-col lg:flex-row justify-center items-center gap-16 lg:gap-36 px-4 py-8 h-auto bg-white dark:bg-[#1E1E1E]">
       {/* Right Side: Profile Image */}
-      <div className="w-[40%] flex flex-col justify-center gap-9">
+      <div className="w-full lg:w-[40%] flex justify-center mb-8 lg:mb-0 order-2 lg:order-1">
         {/* Profile Image */}
-        <div className="relative">
+        <div className="relative w-full max-w-[370px] h-full">
           <img
             src={aboutMeImage}
             alt="Profile"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover rounded-lg"
           />
-
-          <div className="absolute bg-[#FD6F0099] p-3 rounded top-[78px] w-[370px] h-[80px] left-[50px]"></div>
+          <div className="absolute bg-[#FD6F0099] p-3 rounded top-[38px] left-[5x] w-[80%] md:w-[370px] h-[80px]"></div>
         </div>
       </div>
+
       {/* Left Side: Profile Info */}
-      <div className="w-[60%]">
-        <h1 className="text-black dark:text-white text-6xl font-semibold">
+      <div className="w-full lg:w-[60%] text-center lg:text-left order-1 lg:order-2">
+        <h1 className="text-black dark:text-white text-4xl lg:text-6xl font-semibold">
           About Me
         </h1>
-        <p className="mt-4 text-black dark:text-white text-xl font-normal">
+        <p className="mt-4 text-black dark:text-white text-lg lg:text-xl font-normal">
           Lorem ipsum dolor sit amet consectetur. Tristique amet sed massa nibh
           lectus netus in. Aliquet donec morbi convallis pretium. Turpis tempus
           pharetra
@@ -32,7 +32,7 @@ const AboutMe = () => {
         <div className="mt-8 space-y-6">
           {/* UX Design */}
           <div>
-            <h2 className="text-black dark:text-white text-2xl font-semibold">
+            <h2 className="text-black dark:text-white text-xl lg:text-2xl font-semibold">
               UX Design
             </h2>
             <PrograssRange value={80} />
@@ -40,7 +40,7 @@ const AboutMe = () => {
 
           {/* Web Design */}
           <div>
-            <h2 className="text-black dark:text-white text-2xl font-semibold">
+            <h2 className="text-black dark:text-white text-xl lg:text-2xl font-semibold">
               Web Design
             </h2>
             <PrograssRange value={75} />
@@ -48,7 +48,7 @@ const AboutMe = () => {
 
           {/* Graphic Design */}
           <div>
-            <h2 className="text-black dark:text-white text-2xl font-semibold">
+            <h2 className="text-black dark:text-white text-xl lg:text-2xl font-semibold">
               Graphic Design
             </h2>
             <PrograssRange value={90} />
@@ -56,7 +56,7 @@ const AboutMe = () => {
 
           {/* App Design */}
           <div>
-            <h2 className="text-black dark:text-white text-2xl font-semibold">
+            <h2 className="text-black dark:text-white text-xl lg:text-2xl font-semibold">
               App Design
             </h2>
             <PrograssRange value={85} />
