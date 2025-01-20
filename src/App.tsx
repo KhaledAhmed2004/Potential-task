@@ -10,12 +10,12 @@ import Testimonials from "./components/ui/Testimonials";
 function App() {
   return (
     <div className="bg-white dark:bg-[#1E1E1E]">
-      {/* <Navbar /> */}
-      {/* <Hero /> */}
-      {/* <AboutMe /> */}
-      {/* <Services /> */}
+      <Navbar />
+      <Hero />
+      <AboutMe />
+      <Services />
       <MyProjects />
-      {/* <Testimonials /> */}
+      <Testimonials />
       <ContactMe />
       <Footer />
     </div>
