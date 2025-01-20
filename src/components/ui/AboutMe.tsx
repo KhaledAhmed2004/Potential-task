@@ -3,7 +3,7 @@ import PrograssRange from "../prograss-range/ProgressRange";
 
 const AboutMe = () => {
   return (
-    <div className="max-w-7xl mx-auto flex justify-center items-center gap-36 h-screen bg-white">
+    <div className="max-w-7xl mx-auto flex justify-center items-center gap-36 h-screen bg-white dark:bg-[#1E1E1E]">
       {/* Right Side: Profile Image */}
       <div className="w-[40%] flex flex-col justify-center gap-9">
         {/* Profile Image */}
@@ -19,8 +19,10 @@ const AboutMe = () => {
       </div>
       {/* Left Side: Profile Info */}
       <div className="w-[60%]">
-        <h1 className="text-6xl font-semibold">About Me</h1>
-        <p className="text-xl font-normal">
+        <h1 className="text-black dark:text-white text-6xl font-semibold">
+          About Me
+        </h1>
+        <p className="mt-4 text-black dark:text-white text-xl font-normal">
           Lorem ipsum dolor sit amet consectetur. Tristique amet sed massa nibh
           lectus netus in. Aliquet donec morbi convallis pretium. Turpis tempus
           pharetra
@@ -30,25 +32,33 @@ const AboutMe = () => {
         <div className="mt-8 space-y-6">
           {/* UX Design */}
           <div>
-            <h2 className="text-2xl font-semibold">UX Design</h2>
+            <h2 className="text-black dark:text-white text-2xl font-semibold">
+              UX Design
+            </h2>
             <PrograssRange value={80} />
           </div>
 
           {/* Web Design */}
           <div>
-            <h2 className="text-2xl font-semibold">Web Design</h2>
+            <h2 className="text-black dark:text-white text-2xl font-semibold">
+              Web Design
+            </h2>
             <PrograssRange value={80} />
           </div>
 
           {/* Graphic Design */}
           <div>
-            <h2 className="text-2xl font-semibold">Graphic Design</h2>
+            <h2 className="text-black dark:text-white text-2xl font-semibold">
+              Graphic Design
+            </h2>
             <PrograssRange value={80} />
           </div>
 
           {/* App Design */}
           <div>
-            <h2 className="text-2xl font-semibold">App Design</h2>
+            <h2 className="text-black dark:text-white text-2xl font-semibold">
+              App Design
+            </h2>
             <PrograssRange value={80} />
           </div>
         </div>

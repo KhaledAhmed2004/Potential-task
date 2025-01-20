@@ -1,6 +1,6 @@
+import DarkLogo from "../../assets/logo/DarkLogo";
 import Logo from "../../assets/logo/Logo";
-import LogoDark from "../../assets/logo/logoDark";
-import Button from "../button/button";
+import Button from "../button/Button";
 
 const Navbar = () => {
   const navLinks = [
@@ -29,7 +29,7 @@ const Navbar = () => {
       {/* Logo Section */}
       <div>
         <Logo className="h-20 w-40 dark:hidden" />
-        <LogoDark className="h-20 w-40 hidden dark:block" />
+        <DarkLogo className="h-20 w-40 hidden dark:block" />
       </div>
 
       {/* Navbar Links */}

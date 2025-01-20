@@ -1,4 +1,4 @@
-const LogoDark = ({ className }: { className?: string }) => {
+const DarkLogo = ({ className }: { className?: string }) => {
   return (
     <svg
       className={className}
@@ -22,4 +22,4 @@ const LogoDark = ({ className }: { className?: string }) => {
   );
 };
 
-export default LogoDark;
+export default DarkLogo;
