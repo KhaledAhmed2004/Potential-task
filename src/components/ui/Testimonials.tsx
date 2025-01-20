@@ -1,23 +1,30 @@
 import { useState, useEffect, useRef } from "react";
 import SectionHeader from "../SectionHeader";
-import testimonialImage from "../../assets/images/testimonials-image.png";
+import testimonialImage1 from "../../assets/images/testimonials-image1.png";
+import testimonialImage2 from "../../assets/images/testimonials-image2.png";
 import TestimonialCard from "../card/TestimonialCard";
 
 const testimonialsData = [
   {
-    image: testimonialImage,
+    image: testimonialImage1,
     text: "Lorem ipsum dolor sit amet consectetur. In enim cursus odio accumsan. Id leo urna velit neque mattis id tellus arcu condimentum. Augue dictum dolor elementum convallis dignissim malesuada commodo ultrices.",
     authorName: "John Doe",
     authorTitle: "CEO",
   },
   {
-    image: testimonialImage,
+    image: testimonialImage2,
     text: "Lorem ipsum dolor sit amet consectetur. In enim cursus odio accumsan. Id leo urna velit neque mattis id tellus arcu condimentum. Augue dictum dolor elementum convallis dignissim malesuada commodo ultrices.",
     authorName: "Jane Smith",
     authorTitle: "Founder",
   },
   {
-    image: testimonialImage,
+    image: testimonialImage1,
+    text: "Lorem ipsum dolor sit amet consectetur. In enim cursus odio accumsan. Id leo urna velit neque mattis id tellus arcu condimentum. Augue dictum dolor elementum convallis dignissim malesuada commodo ultrices.",
+    authorName: "Alice Johnson",
+    authorTitle: "Director",
+  },
+  {
+    image: testimonialImage2,
     text: "Lorem ipsum dolor sit amet consectetur. In enim cursus odio accumsan. Id leo urna velit neque mattis id tellus arcu condimentum. Augue dictum dolor elementum convallis dignissim malesuada commodo ultrices.",
     authorName: "Alice Johnson",
     authorTitle: "Director",
@@ -31,10 +38,29 @@ const Testimonials = () => {
   useEffect(() => {
     const handleScroll = () => {
       if (testimonialsRef.current) {
+        const containerWidth = testimonialsRef.current.offsetWidth;
         const scrollLeft = testimonialsRef.current.scrollLeft;
-        const width = testimonialsRef.current.offsetWidth;
-        const index = Math.round(scrollLeft / width); // Calculate which card is in view
-        setCurrentIndex(index); // Set the current index based on the scroll position
+
+        // Calculate the middle of the container
+        const containerMiddle = scrollLeft + containerWidth / 2;
+
+        // Check which card is closest to the center of the container
+        let closestIndex = 0;
+        let closestDistance = Number.MAX_VALUE;
+
+        testimonialsRef.current.childNodes.forEach(
+          (node: any, index: number) => {
+            const cardMiddle = node.offsetLeft + node.offsetWidth / 2;
+            const distance = Math.abs(containerMiddle - cardMiddle);
+
+            if (distance < closestDistance) {
+              closestDistance = distance;
+              closestIndex = index;
+            }
+          }
+        );
+
+        setCurrentIndex(closestIndex); // Set the current index based on the closest card
       }
     };
 
@@ -56,12 +82,12 @@ const Testimonials = () => {
   };
 
   return (
-    <div className="px-4 py-16 bg-white">
+    <div className="px-4 py-16">
       <SectionHeader
         title="Testimonials"
         subHeader="Lorem ipsum dolor sit amet consectetur. Tristique amet sed massa nibh lectus netus in. Aliquet donec morbi convallis pretium"
       />
-      <div className="relative mt-8 max-w-[1200px] mx-auto">
+      <div className="relative mt-8 max-w-7xl mx-auto">
         {/* Scrollable Horizontal Container */}
         <div
           ref={testimonialsRef}

@@ -6,7 +6,7 @@ type ServiceCardProps = {
 
 const ServiceCard = ({ title, description, icon: Icon }: ServiceCardProps) => {
   return (
-    <div className="bg-[#F8F8F8] w-[330px] h-[346px] rounded-[14px] p-[18px]">
+    <div className="bg-[#F8F8F8] h-[346px] rounded-[14px] p-[18px]">
       {/* Dynamic Icon */}
       <div className="pt-[26px]">
         <Icon />

@@ -12,19 +12,23 @@ const TestimonialCard = ({
   authorTitle,
 }: TestimonialCardProps) => {
   return (
-    <div className="flex flex-col sm:flex-row items-center gap-8 bg-[#F8F8F8] w-[800px] mx-auto py-8 px-6 rounded-lg shadow-md">
-      <div className="w-[235px] h-[235px]">
+    <div className="flex flex-col sm:flex-row items-center gap-8 bg-[#F8F8F8] w-[800px] h-[250px] mx-auto py-8 px-6 rounded-lg shadow-md">
+      {/* Image Container: Takes 30% of the card width */}
+      <div className="w-[30%] h-auto flex-shrink-0">
         <img
           src={image}
           alt={`${authorName}'s profile`}
-          className="w-full h-auto rounded-full shadow-lg"
+          className="w-full h-auto rounded-full p-5"
         />
       </div>
-      <div className="flex flex-col text-center sm:text-left">
-        <p className="text-[#FD6F00] text-2xl mb-4">“</p>
-        <p className="text-gray-600 text-base mb-4">{text}</p>
-        <p className="text-[#FD6F00] text-2xl mb-4">“</p>
-        <h3 className="text-lg font-bold">{authorName}</h3>
+
+      {/* Text Content */}
+      <div className="flex flex-col text-center sm:text-left flex-grow">
+        <p className="text-gray-600 text-base">
+          <span className="text-[#FD6F00] text-2xl font-bold">“</span> {text}
+          <span className="text-[#FD6F00] text-2xl font-bold">”</span>
+        </p>
+        <h3 className="text-lg font-bold mt-2">{authorName}</h3>
         <p className="text-sm text-gray-500">{authorTitle}</p>
       </div>
     </div>

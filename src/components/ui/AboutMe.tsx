@@ -43,7 +43,7 @@ const AboutMe = () => {
             <h2 className="text-black dark:text-white text-2xl font-semibold">
               Web Design
             </h2>
-            <PrograssRange value={80} />
+            <PrograssRange value={75} />
           </div>
 
           {/* Graphic Design */}
@@ -51,7 +51,7 @@ const AboutMe = () => {
             <h2 className="text-black dark:text-white text-2xl font-semibold">
               Graphic Design
             </h2>
-            <PrograssRange value={80} />
+            <PrograssRange value={90} />
           </div>
 
           {/* App Design */}
@@ -59,7 +59,7 @@ const AboutMe = () => {
             <h2 className="text-black dark:text-white text-2xl font-semibold">
               App Design
             </h2>
-            <PrograssRange value={80} />
+            <PrograssRange value={85} />
           </div>
         </div>
       </div>

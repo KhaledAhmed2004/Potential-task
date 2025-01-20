@@ -10,12 +10,16 @@ const ProjectShowCard = ({
 }: ProjectShowCardProps) => {
   return (
     <div>
-      <div className="bg-[#FFEBDB] w-[445px] h-[490px] rounded-[12px]">
-        <img src={imageSrc} alt={title} />
+      <div className="bg-[#FFEBDB] w-[445px h-[490px] rounded-[12px] overflow-hidden">
+        <img className="w-full object-cover" src={imageSrc} alt={title} />
       </div>
-      <div>
-        <p className="text-[#FD6F00] text-xl font-normal">{category}</p>
-        <h3 className="text-2xl font-bold">{title}</h3>
+      <div className="mt-[35px]">
+        <p className="text-[#FD6F00] text-xl font-normal mb-[10px]">
+          {category}
+        </p>
+        <h3 className="text-black dark:text-white text-2xl font-bold">
+          {title}
+        </h3>
       </div>
     </div>
   );

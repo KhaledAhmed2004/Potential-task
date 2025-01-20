@@ -13,12 +13,12 @@ const categories = [
 
 const MyProjects = () => {
   return (
-    <div>
+    <div className="max-w-7xl mx-auto mt-10">
       <SectionHeader
         title="My Projects"
         subHeader="Lorem ipsum dolor sit amet consectetur. Mollis erat duis aliquam mauris est risus lectus. Phasellus consequat urna tellus"
       />
-      <div className="mt-8 flex space-x-6">
+      <div className="mt-8 mb-[80px] flex gap-[22px] justify-center">
         {categories.map((category) => (
           <div
             key={category}
@@ -28,7 +28,7 @@ const MyProjects = () => {
           </div>
         ))}
       </div>
-      <div className="flex gap-[44px] justify-center">
+      <div className="flex gap-[44px] justify-between">
         <ProjectShowCard
           imageSrc={projectImage1}
           category="Web Design"
