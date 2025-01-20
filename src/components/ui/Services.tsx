@@ -1,5 +1,5 @@
 import AppDesignIncon from "../../assets/icons/AppDesignIncon";
-import GraphicDesignIncon from "../../assets/icons/graphicDesignIncon";
+import GraphicDesignIncon from "../../assets/icons/GraphicDesignIncon";
 import UIUXIcon from "../../assets/icons/UIUXIcon";
 import WebDEsignIncon from "../../assets/icons/WebDEsignIncon";
 import ServiceCard from "../card/ServiceCard";

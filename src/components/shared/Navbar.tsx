@@ -1,5 +1,5 @@
 import Logo from "../../assets/Logo";
-import Button from "../button/button";
+import Button from "../button/Button";
 
 const Navbar = () => {
   const navLinks = [

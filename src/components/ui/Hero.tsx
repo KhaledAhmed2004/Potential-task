@@ -3,7 +3,7 @@ import InstagramIcon from "../../assets/icons/InstagramIcon";
 import LinkedInIcon from "../../assets/icons/LinkedInIcon";
 import TwitterIcon from "../../assets/icons/TwitterIcon";
 import heroImage from "../../assets/images/hero-image.png";
-import Button from "../button/button";
+import Button from "../button/Button";
 
 const Hero = () => {
   return (
