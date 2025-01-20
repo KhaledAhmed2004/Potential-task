@@ -9,7 +9,7 @@ import Testimonials from "./components/ui/Testimonials";
 
 function App() {
   return (
-    <div>
+    <div className="bg-white dark:bg-[#1E1E1E]">
       <Navbar />
       <Hero />
       <AboutMe />

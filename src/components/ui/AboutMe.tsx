@@ -1,5 +1,5 @@
 import aboutMeImage from "../../assets/images/aboutMe-image.png";
-import PrograssRange from "../prograss-range/PrograssRange";
+import PrograssRange from "../prograss-range/ProgressRange";
 
 const AboutMe = () => {
   return (

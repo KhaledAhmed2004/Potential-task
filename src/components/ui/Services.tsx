@@ -1,4 +1,4 @@
-import AppDesignIncon from "../../assets/icons/AppDesignIncon";
+import AppDesignIncon from "../../assets/icons/AppDesignIcon";
 import GraphicDesignIncon from "../../assets/icons/GraphicDesignIncon";
 import UIUXIcon from "../../assets/icons/UIUXIcon";
 import WebDEsignIncon from "../../assets/icons/WebDEsignIncon";
