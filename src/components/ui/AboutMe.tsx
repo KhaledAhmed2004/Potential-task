@@ -13,7 +13,7 @@ const AboutMe = () => {
             alt="Profile"
             className="w-full h-full object-cover rounded-lg"
           />
-          <div className="absolute bg-[#FD6F0099] p-3 top-[68px] left-[10%] sm:left-[15%] md:left-[20%] lg:left-[25%] w-[80%] sm:w-[70%] md:w-[60%] lg:w-[50%] h-[70px] md:h-[80px]"></div>
+          <div className="absolute bg-[#FD6F0099] p-3 top-16 left-1/2 transform -translate-x-1/2 w-[90%] sm:w-[80%] md:w-[70%] lg:w-[60%] xl:w-[70%] h-[60px] sm:h-[70px]"></div>
         </div>
       </div>
 

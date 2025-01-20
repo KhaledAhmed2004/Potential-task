@@ -46,7 +46,6 @@ const Hero = () => {
             alt="Profile"
             className="w-full h-full object-cover rounded-lg"
           />
-          {/* <div className="absolute bg-[#FD6F0099] p-3 rounded top-[78px] left-[50px] w-[80%] md:w-[370px] h-[80px]"></div> */}
 
           <div className="absolute bg-[#FD6F0099] p-3 top-12 left-1/2 transform -translate-x-1/2 w-[90%] sm:w-[80%] md:w-[70%] lg:w-[60%] xl:w-[70%] h-[60px] sm:h-[70px]"></div>
 

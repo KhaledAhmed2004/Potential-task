@@ -11,10 +11,10 @@ function App() {
   return (
     <div className="bg-white dark:bg-[#1E1E1E]">
       {/* <Navbar /> */}
-      <Hero />
-      <AboutMe />
-      <Services />
-      {/* <MyProjects /> */}
+      {/* <Hero /> */}
+      {/* <AboutMe /> */}
+      {/* <Services /> */}
+      <MyProjects />
       {/* <Testimonials /> */}
       <ContactMe />
       <Footer />
