@@ -91,7 +91,7 @@ const Testimonials = () => {
         {/* Scrollable Horizontal Container */}
         <div
           ref={testimonialsRef}
-          className="flex gap-4 overflow-x-auto snap-x snap-mandatory scroll-smooth scrollbar-hide"
+          className="flex gap-2 md:gap-4 overflow-x-auto snap-x snap-mandatory scroll-smooth scrollbar-hide"
         >
           {testimonialsData.map((testimonial, index) => (
             <div
