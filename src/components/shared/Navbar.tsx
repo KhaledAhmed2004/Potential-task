@@ -1,3 +1,4 @@
+import Logo from "../../assets/logo";
 import Button from "../button/button";
 
 const Navbar = () => {
@@ -23,10 +24,10 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="flex justify-between items-center mt-[30px] max-w-[1420px] mx-auto">
+    <nav className="flex justify-between items-center mt-[30px] max-w-7xl mx-auto">
       {/* Logo Section */}
       <div>
-        <span>M</span>umair
+        <Logo className="h-20 w-40"/>
       </div>
 
       {/* Navbar Links */}
