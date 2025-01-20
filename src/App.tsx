@@ -11,7 +11,7 @@ function App() {
   return (
     <div className="bg-white dark:bg-[#1E1E1E]">
       {/* <Navbar /> */}
-      {/* <Hero /> */}
+      <Hero />
       <AboutMe />
       <Services />
       {/* <MyProjects /> */}

@@ -3,22 +3,22 @@ import PrograssRange from "../prograss-range/ProgressRange";
 
 const AboutMe = () => {
   return (
-    <div className="max-w-7xl mx-auto flex flex-col lg:flex-row justify-center items-center gap-16 lg:gap-36 px-4 py-8 h-auto bg-white dark:bg-[#1E1E1E]">
+    <div className="max-w-7xl mx-auto flex flex-col lg:flex-row justify-center items-center px-4 py-8 h-auto bg-white dark:bg-[#1E1E1E]">
       {/* Right Side: Profile Image */}
-      <div className="w-full lg:w-[40%] flex justify-center mb-8 lg:mb-0 order-2 lg:order-1">
+      <div className="w-full lg:w-[50%] flex justify-center mb-8 lg:mb-0 order-2 lg:order-1">
         {/* Profile Image */}
-        <div className="relative w-full max-w-[370px] h-full">
+        <div className="relative w-full max-w-[500px] h-full">
           <img
             src={aboutMeImage}
             alt="Profile"
             className="w-full h-full object-cover rounded-lg"
           />
-          <div className="absolute bg-[#FD6F0099] p-3 rounded top-[38px] left-[5x] w-[80%] md:w-[370px] h-[80px]"></div>
+          <div className="absolute bg-[#FD6F0099] p-3 top-[68px] left-[10%] sm:left-[15%] md:left-[20%] lg:left-[25%] w-[80%] sm:w-[70%] md:w-[60%] lg:w-[50%] h-[70px] md:h-[80px]"></div>
         </div>
       </div>
 
       {/* Left Side: Profile Info */}
-      <div className="w-full lg:w-[60%] text-center lg:text-left order-1 lg:order-2">
+      <div className="w-full lg:w-[50%] text-center lg:text-left order-1 lg:order-2">
         <h1 className="text-black dark:text-white text-4xl lg:text-6xl font-semibold">
           About Me
         </h1>
