@@ -1,4 +1,4 @@
-import Logo from "../../assets/logo";
+import Logo from "../../assets/Logo";
 import Button from "../button/button";
 
 const Navbar = () => {
@@ -27,7 +27,7 @@ const Navbar = () => {
     <nav className="flex justify-between items-center mt-[30px] max-w-7xl mx-auto">
       {/* Logo Section */}
       <div>
-        <Logo className="h-20 w-40"/>
+        <Logo className="h-20 w-40" />
       </div>
 
       {/* Navbar Links */}

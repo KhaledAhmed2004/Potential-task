@@ -2,7 +2,7 @@ import FacebookIcon from "../../assets/icons/FacebookIcon";
 import InstagramIcon from "../../assets/icons/InstagramIcon";
 import LinkedInIcon from "../../assets/icons/LinkedInIcon";
 import TwitterIcon from "../../assets/icons/TwitterIcon";
-import Logo from "../../assets/logo";
+import Logo from "../../assets/Logo";
 
 const Footer = () => {
   const navLinks = [
