@@ -2,7 +2,7 @@ import SectionHeader from "../SectionHeader";
 
 const ContactMe = () => {
   return (
-    <div className="flex flex-col items-center px-4 py-8">
+    <div id="contact" className="flex flex-col items-center px-4 py-8">
       <SectionHeader
         title="Let's Design Together"
         subHeader="Lorem ipsum dolor sit amet consectetur. Tristique amet sed massa nibh lectus netus in. Aliquet donec morbi convallis pretium"

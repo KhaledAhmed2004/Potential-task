@@ -10,7 +10,7 @@ import InstagramIconDark from "../../assets/icons/InstagramIconDark";
 
 const Hero = () => {
   return (
-    <div className="bg-white dark:bg-[#1E1E1E] max-w-7xl mx-auto flex flex-col lg:flex-row justify-center items-center gap-16 lg:gap-36 h-auto px-4 py-8">
+    <div id="hero" className="bg-white dark:bg-[#1E1E1E] max-w-7xl mx-auto flex flex-col lg:flex-row justify-center items-center gap-16 lg:gap-36 h-auto px-4 py-8">
       {/* Left Side: Profile Info */}
       <div className="w-full lg:w-[60%] text-center lg:text-left">
         <h1 className="text-black dark:text-white text-2xl font-semibold">

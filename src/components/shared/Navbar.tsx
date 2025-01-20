@@ -1,5 +1,6 @@
 import { useState } from "react";
 import DarkLogo from "../../assets/logo/DarkLogo";
+import { Link } from "react-scroll";
 import Logo from "../../assets/logo/Logo";
 import Button from "../button/Button";
 
@@ -7,20 +8,22 @@ const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navLinks = [
-    { label: "Home" },
-    { label: "About Me" },
-    { label: "Service" },
-    { label: "Projects" },
-    { label: "Testimonials" },
-    { label: "Contact" },
+    { label: "Home", to: "hero" },
+    { label: "About Me", to: "about" },
+    { label: "Service", to: "service" },
+    { label: "Projects", to: "projects" },
+    { label: "Testimonials", to: "testimonials" },
+    { label: "Contact", to: "contact" },
   ];
 
   return (
-    <nav className="bg-white dark:bg-[#1E1E1E] flex justify-between items-center pt-[30px] max-w-7xl mx-auto px-4 relative">
+    <nav className="bg-white dark:bg-[#1E1E1E] flex justify-between items-center pt-6 max-w-7xl mx-auto px-4  sticky top-0 right-0 left-0 z-50">
       {/* Logo Section */}
-      <div>
-        <Logo className="h-20 w-40 dark:hidden" />
-        <DarkLogo className="h-20 w-40 hidden dark:block" />
+      <div className="cursor-pointer">
+        <Link to="hero" spy={true} smooth={true} offset={-100} duration={500}>
+          <Logo className="h-20 w-40 dark:hidden" />
+          <DarkLogo className="h-20 w-40 hidden dark:block" />
+        </Link>
       </div>
 
       {/* Hamburger Icon for Small Screens */}
@@ -38,9 +41,9 @@ const Navbar = () => {
               className="w-6 h-6"
             >
               <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
                 d="M6 18L18 6M6 6l12 12"
               />
             </svg>
@@ -53,9 +56,9 @@ const Navbar = () => {
               className="w-6 h-6"
             >
               <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
                 d="M4 6h16M4 12h16M4 18h16"
               />
             </svg>
@@ -67,12 +70,23 @@ const Navbar = () => {
       <div
         className={`${
           isMenuOpen ? "block" : "hidden"
-        } lg:flex lg:items-center absolute lg:relative top-full left-0 w-full bg-white dark:bg-[#1E1E1E] lg:bg-transparent shadow-md lg:shadow-none`}
+        } lg:flex lg:items-center absolute lg:relative top-full left-0 w-full bg-white dark:bg-[#1E1E1E] lg:bg-transparent shadow-md lg:shadow-none z-10`}
       >
-        <ul className="flex lg:flex-row flex-col lg:items-center items-center justify-center gap-3 lg:gap-8 py-4 lg:py-0 w-full">
+        <ul className="flex lg:flex-row flex-col lg:items-center items-center justify-end gap-3 lg:gap-8 py-4 lg:py-0 w-full">
           {navLinks.map((link, index) => (
             <li key={index} className="mx-3 text-black dark:text-white">
-              {link.label}
+              <Link
+                to={link.to}
+                spy={true}
+                smooth={true}
+                offset={-100}
+                duration={500}
+                className="relative group cursor-pointer"
+                activeClass="font-semibold text-[#FD6F00] underline underline-offset-2 decoration-[1.5px]"
+              >
+                {link.label}
+                <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-[#FD6F00] transition-all duration-300 group-hover:w-full"></span>
+              </Link>
             </li>
           ))}
           <li>

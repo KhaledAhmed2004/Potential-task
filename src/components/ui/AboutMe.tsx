@@ -3,7 +3,10 @@ import PrograssRange from "../prograss-range/ProgressRange";
 
 const AboutMe = () => {
   return (
-    <div className="max-w-7xl mx-auto flex flex-col lg:flex-row justify-center items-center px-4 py-8 h-auto bg-white dark:bg-[#1E1E1E]">
+    <div
+      id="about"
+      className="max-w-7xl mx-auto flex flex-col lg:flex-row justify-center items-center px-4 py-8 h-auto bg-white dark:bg-[#1E1E1E]"
+    >
       {/* Right Side: Profile Image */}
       <div className="w-full lg:w-[50%] flex justify-center mb-8 lg:mb-0 order-2 lg:order-1">
         {/* Profile Image */}

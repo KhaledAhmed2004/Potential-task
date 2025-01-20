@@ -40,11 +40,8 @@ const Testimonials = () => {
       if (testimonialsRef.current) {
         const containerWidth = testimonialsRef.current.offsetWidth;
         const scrollLeft = testimonialsRef.current.scrollLeft;
-
-        // Calculate the middle of the container
         const containerMiddle = scrollLeft + containerWidth / 2;
 
-        // Check which card is closest to the center of the container
         let closestIndex = 0;
         let closestDistance = Number.MAX_VALUE;
 
@@ -60,29 +57,37 @@ const Testimonials = () => {
           }
         );
 
-        setCurrentIndex(closestIndex); // Set the current index based on the closest card
+        console.log("Closest Index:", closestIndex);
+        setCurrentIndex(closestIndex);
       }
     };
 
-    // Add the scroll event listener
-    testimonialsRef.current?.addEventListener("scroll", handleScroll);
+    const container = testimonialsRef.current;
 
-    // Clean up the event listener on component unmount
+    // Add event listeners for both scroll and wheel
+    container?.addEventListener("scroll", handleScroll);
+    container?.addEventListener("wheel", handleScroll);
+
+    // Clean up event listeners on component unmount
     return () => {
-      testimonialsRef.current?.removeEventListener("scroll", handleScroll);
+      container?.removeEventListener("scroll", handleScroll);
+      container?.removeEventListener("wheel", handleScroll);
     };
   }, []);
 
   const handleDotClick = (index: number) => {
     setCurrentIndex(index);
     if (testimonialsRef.current) {
-      const width = testimonialsRef.current.offsetWidth;
-      testimonialsRef.current.scrollLeft = index * width; // Scroll to the clicked dot's corresponding testimonial
+      const cardNode = testimonialsRef.current.childNodes[index] as HTMLElement;
+      const cardMiddle = cardNode.offsetLeft + cardNode.offsetWidth / 2;
+      const containerMiddle = testimonialsRef.current.offsetWidth / 2;
+
+      testimonialsRef.current.scrollLeft = cardMiddle - containerMiddle;
     }
   };
 
   return (
-    <div className="px-4 py-16">
+    <div id="testimonials" className="px-4 py-16">
       <SectionHeader
         title="Testimonials"
         subHeader="Lorem ipsum dolor sit amet consectetur. Tristique amet sed massa nibh lectus netus in. Aliquet donec morbi convallis pretium"
@@ -118,9 +123,9 @@ const Testimonials = () => {
             <button
               key={index}
               onClick={() => handleDotClick(index)}
-              className={`w-[56px] h-4 rounded-full ${
+              className={`w-[40px] h-2 rounded-full ${
                 index === currentIndex ? "bg-[#FD6F00]" : "bg-gray-400"
-              }`}
+              } sm:w-[48px] sm:h-3 md:w-[56px] md:h-4`} // Adjust size on different screens
             />
           ))}
         </div>

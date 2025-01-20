@@ -41,7 +41,7 @@ const MyProjects = () => {
       : projects.filter((project) => project.category === selectedCategory);
 
   return (
-    <div className="max-w-7xl mx-auto py-10 px-4">
+    <div id="projects" className="max-w-7xl mx-auto py-10 px-4">
       <SectionHeader
         title="My Projects"
         subHeader="Lorem ipsum dolor sit amet consectetur. Mollis erat duis aliquam mauris est risus lectus. Phasellus consequat urna tellus"

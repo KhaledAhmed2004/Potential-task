@@ -34,7 +34,7 @@ const servicesData = [
 
 const Services = () => {
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div id="service" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <SectionHeader
         title="Services"
         subHeader="Lorem ipsum dolor sit amet consectetur. Tristique amet sed massa nibh lectus netus in. Aliquet donec morbi convallis pretium"
