@@ -2,6 +2,11 @@
 
 Welcome to this portfolio project job task for **Potential Inc**! This task showcase of my skills and expertise as a developer, highlighting my ability to convert Figma designs into fully functional and responsive React components. The project demonstrates a modern, responsive, and user-friendly portfolio website.
 
+## 🌐 **Live Preview**
+
+Check out the live demo of the project here:  
+👉 [**Live Link**](https://potential-task-eight.vercel.app/)
+
 ## 🚀 Features
 
 - **Smooth On-Page Scrolling**: Implemented using `react-scroll` for a seamless navigation experience.
@@ -72,10 +77,3 @@ Follow these steps to set up the project on your local machine:
    - Type safety ensures robust code with fewer runtime errors.
    - Improves overall development efficiency and code readability.
 
----
-
-
-## 🌐 **Live Preview**
-
-Check out the live demo of the project here:  
-👉 [**Live Link**](https://potential-task-eight.vercel.app/)
