@@ -1,5 +1,5 @@
 import AppDesignIcon from "../../assets/icons/AppDesignIcon";
-import GraphicDesignIncon from "../../assets/icons/GraphicDesignIncon";
+import GraphicDesignIcon from "../../assets/icons/GraphicDesignIcon";
 import UIUXIcon from "../../assets/icons/UIUXIcon";
 import WebDEsignIncon from "../../assets/icons/WebDEsignIncon";
 import ServiceCard from "../card/ServiceCard";
@@ -25,7 +25,7 @@ const servicesData = [
       "Lorem ipsum dolor sit amet consectetur. Morbi diam nisi nam diam interdum",
   },
   {
-    icon: GraphicDesignIncon,
+    icon: GraphicDesignIcon,
     title: "Graphic Design",
     description:
       "Lorem ipsum dolor sit amet consectetur. Morbi diam nisi nam diam interdum",

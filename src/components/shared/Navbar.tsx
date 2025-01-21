@@ -2,11 +2,12 @@ import { useState } from "react";
 import DarkLogo from "../../assets/logo/DarkLogo";
 import { Link } from "react-scroll";
 import Logo from "../../assets/logo/Logo";
-import Button from "../button/Button";
+import resume from "../../assets/KhaledAhmedNayeem.pdf";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  // Navigation links with labels and target sections Id.
   const navLinks = [
     { label: "Home", to: "hero" },
     { label: "About Me", to: "about" },
@@ -30,9 +31,10 @@ const Navbar = () => {
       <div className="lg:hidden flex items-center">
         <button
           className="text-black dark:text-white"
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
+          onClick={() => setIsMenuOpen(!isMenuOpen)} // Toggle menu.
         >
           {isMenuOpen ? (
+            // Close Icon
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -48,6 +50,7 @@ const Navbar = () => {
               />
             </svg>
           ) : (
+            // Menu Icon
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -73,6 +76,7 @@ const Navbar = () => {
         } lg:flex lg:items-center absolute lg:relative top-full left-0 w-full bg-white dark:bg-[#1E1E1E] lg:bg-transparent shadow-md lg:shadow-none z-10`}
       >
         <ul className="flex lg:flex-row flex-col lg:items-center items-center justify-end gap-3 lg:gap-8 py-4 lg:py-0 w-full">
+          {/* Map nav links */}
           {navLinks.map((link, index) => (
             <li key={index} className="mx-3 text-black dark:text-white">
               <Link
@@ -85,12 +89,19 @@ const Navbar = () => {
                 activeClass="font-semibold text-[#FD6F00] underline underline-offset-2 decoration-[1.5px]"
               >
                 {link.label}
+                {/* Hover effect */}
                 <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-[#FD6F00] transition-all duration-300 group-hover:w-full"></span>
               </Link>
             </li>
           ))}
           <li>
-            <Button label="Download CV" />
+            <a
+              href={resume}
+              download="KhaledAhmedNayeem-Resume" // Set the name of the downloaded file
+              className="bg-[#FD6F00] text-white py-[16px] px-[18px] text-[16px] font-normal rounded-md"
+            >
+              Download CV
+            </a>
           </li>
         </ul>
       </div>

@@ -1,4 +1,4 @@
-const GraphicDesignIncon = ({ className }: { className?: string }) => {
+const GraphicDesignIcon = ({ className }: { className?: string }) => {
   return (
     <svg
       className={className}
@@ -49,4 +49,4 @@ const GraphicDesignIncon = ({ className }: { className?: string }) => {
   );
 };
 
-export default GraphicDesignIncon;
+export default GraphicDesignIcon;
